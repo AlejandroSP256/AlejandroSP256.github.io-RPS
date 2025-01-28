@@ -15,7 +15,10 @@ body {
 }
 
 .container {
-  margin: 50px 300px 0;
+  margin: 20px auto; /* Centra la caja automáticamente */
+  padding: 20px; /* Añadido para evitar contenido pegado al borde */
+  max-width: 90%; /* Ancho máximo del contenedor */
+  width: 500px; /* Tamaño por defecto */
   border: 1px solid black;
   border-radius: 30px;
   background-color: #39434b;
@@ -23,6 +26,7 @@ body {
 
 h1 {
   color: #201f1f;
+  font-size: 2rem; /* Tamaño de fuente relativo */
 }
 
 .choices {
@@ -30,7 +34,7 @@ h1 {
 }
 
 button {
-  font-size: 50px;
+  font-size: 2.5rem; /* Ajuste relativo */
   padding: 10px 20px;
   margin: 0 10px;
   cursor: pointer;
@@ -46,10 +50,40 @@ button:hover {
 
 .result {
   margin-top: 20px;
-  font-size: 20px;
+  font-size: 1rem; /* Ajuste relativo */
 }
 
 .scoreboard {
   margin-top: 20px;
-  font-size: 18px;
+  font-size: 1rem; /* Ajuste relativo */
+}
+
+/* Consultas de medios para hacerlo responsive */
+@media (max-width: 768px) {
+  .container {
+    max-width: 95%; /* Hacerlo más ancho en pantallas pequeñas */
+    width: auto;
+    padding: 10px; /* Reducir el padding */
+  }
+
+  button {
+    font-size: 1.2rem; /* Reducir tamaño del texto en botones */
+    padding: 8px 15px;
+  }
+
+  .result,
+  .scoreboard {
+    font-size: 0.9rem; /* Ajustar tamaño del texto */
+  }
+}
+
+@media (max-width: 480px) {
+  button {
+    font-size: 1rem; /* Reducir aún más el tamaño */
+    padding: 5px 10px;
+  }
+
+  h1 {
+    font-size: 1.5rem; /* Ajustar el encabezado */
+  }
 }
